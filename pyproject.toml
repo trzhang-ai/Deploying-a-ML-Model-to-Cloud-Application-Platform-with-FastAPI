@@ -1,0 +1,15 @@
+[project]
+name = "deploying-a-ml-model-to-cloud-application-platform-with-fastapi"
+version = "0.1.0"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "numpy>=2.5.2",
+    "pandas>=3.0.5",
+    "scikit-learn>=1.9.0",
+]
+
+[dependency-groups]
+dev = [
+    "flake8>=7.3.0",
+    "pytest>=9.1.1",
+]
