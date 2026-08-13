@@ -1,5 +1,10 @@
 Working in a command line environment is recommended for ease of use with git and dvc. If on Windows, WSL1 or 2 is recommended.
 
+# Project Links
+* **GitHub repository:** https://github.com/trzhang-ai/Deploying-a-ML-Model-to-Cloud-Application-Platform-with-FastAPI
+* **Live Render API:** https://deploying-a-ml-model-to-cloud-fjou.onrender.com/
+* **Interactive API documentation:** https://deploying-a-ml-model-to-cloud-fjou.onrender.com/docs
+
 # Environment Set up
 * **Option 1: Using pip and venv (Recommended)**
     * Ensure you have Python 3.13 installed
