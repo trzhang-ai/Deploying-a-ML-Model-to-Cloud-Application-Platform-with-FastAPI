@@ -33,7 +33,8 @@ cat_features = [
     "sex",
     "native-country",
 ]
-# Optional enhancement, use K-fold cross validation instead of a train-test split.
+# Optional enhancement, use K-fold cross validation instead of a train-test
+# split.
 skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 X = data.drop(columns=["salary"])
 y = data["salary"]

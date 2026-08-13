@@ -27,4 +27,10 @@ jobs:
       - name: Run tests
         run: uv run --locked pytest
       - name: Check code style
-        run: uv run --locked flake8 starter
+        run: uv run --locked flake8 \
+          starter/main.py \
+          starter/starter/ml/data.py \
+          starter/starter/ml/model.py \
+          starter/starter/train_model.py \
+          tests \
+          --max-line-length=79

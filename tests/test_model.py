@@ -3,7 +3,6 @@ import numpy as np
 from sklearn.datasets import make_classification
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.utils.validation import check_is_fitted
-from sklearn.exceptions import NotFittedError
 from starter.starter.ml.model import train_model
 from starter.starter.ml.model import compute_model_metrics
 from starter.starter.ml.model import inference
@@ -58,7 +57,7 @@ def test_inference(fitted_model, sample_data):
     preds = inference(fitted_model, X)
     assert len(y) == len(
         preds
-    ), "The number of predictions must be the same as the number of observations!"
+    ), "The number of predictions must match the number of observations!"
     unique_values = np.unique(preds)
     assert (
         unique_values.size == 2
