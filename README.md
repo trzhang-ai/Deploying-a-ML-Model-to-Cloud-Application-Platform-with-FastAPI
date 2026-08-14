@@ -9,13 +9,16 @@ Render.
 
 | Resource | Link |
 | --- | --- |
-| Live API | [deploying-a-ml-model-to-cloud-fjou.onrender.com](https://deploying-a-ml-model-to-cloud-fjou.onrender.com/) |
-| Interactive OpenAPI docs | [Swagger UI](https://deploying-a-ml-model-to-cloud-fjou.onrender.com/docs) |
+| Hosted API | [Render service — currently suspended](https://deploying-a-ml-model-to-cloud-fjou.onrender.com/) |
+| Interactive OpenAPI docs | [Swagger UI — available after resuming](https://deploying-a-ml-model-to-cloud-fjou.onrender.com/docs) |
 | Model documentation | [Model card](starter/model_card_template.md) |
 | CI workflow | [GitHub Actions](https://github.com/trzhang-ai/Deploying-a-ML-Model-to-Cloud-Application-Platform-with-FastAPI/actions/workflows/ci.yml) |
 
-> The public Render instance may need a short cold start after a period of
-> inactivity.
+> **Deployment status:** The Render web service is intentionally suspended
+> after its live GET and POST endpoints and CI-gated deployment were verified.
+> Suspending it prevents idle cloud-resource usage while preserving the service
+> configuration and deployment history. Resume it before using the hosted API
+> or Swagger UI; the application remains fully runnable locally.
 
 ## What this project demonstrates
 
@@ -67,7 +70,7 @@ slice-analysis methodology, ethical considerations, and evaluation limits.
 | `POST` | `/predict` | Predict one record |
 | `POST` | `/batch_predict` | Predict one or more records |
 
-Run the committed live-request example:
+After resuming the hosted service, run the committed request client:
 
 ```bash
 uv run --locked python test_request.py
