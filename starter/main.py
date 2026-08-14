@@ -123,7 +123,16 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     ml_models.clear()
 
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI(
+    title="Census Income Prediction API",
+    description=(
+        "Typed single-record and batch inference for a Random Forest Census "
+        "Income classifier. Demonstration use only; not for high-impact "
+        "decisions."
+    ),
+    version="1.0.0",
+    lifespan=lifespan,
+)
 
 
 @app.get("/")

@@ -1,6 +1,9 @@
 [project]
-name = "deploying-a-ml-model-to-cloud-application-platform-with-fastapi"
-version = "0.1.0"
+name = "census-income-prediction-api"
+version = "1.0.0"
+description = "A tested FastAPI inference service for a Census Income classifier."
+readme = "README.md"
+authors = [{ name = "Tianrui Zhang" }]
 requires-python = ">=3.13,<3.14"
 dependencies = [
     "fastapi[standard]>=0.141.1",

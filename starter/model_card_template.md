@@ -1,4 +1,4 @@
-# Model Card
+# Model Card: Census Income Random Forest
 
 ## Model Details
 
@@ -8,8 +8,8 @@ hyperparameters and was trained with Python 3.13.3. The final model is trained
 on the complete local training dataset and is saved with its categorical encoder
 and label binarizer.
 
-This is an educational course project. It is not presented as a production-ready
-or independently validated income-prediction system. The reporting structure is
+This is a portfolio demonstration rather than a production-ready or
+independently validated income-prediction system. The reporting structure is
 informed by [Model Cards for Model Reporting](https://arxiv.org/abs/1810.03993).
 
 ## Intended Use
@@ -19,9 +19,9 @@ annual-income category in the Census Income dataset. Its intended use is to
 demonstrate a machine-learning training, evaluation, serialization, and
 inference workflow.
 
-The model is intended for learning, experimentation, and technical demonstration
-by students and developers. It must not be used to make or automate decisions
-about a person's employment, credit, insurance, housing, education, taxation,
+The model is intended for technical demonstration, experimentation, and
+reproducibility review. It must not be used to make or automate decisions about
+a person's employment, credit, insurance, housing, education, taxation,
 government benefits, or other high-impact opportunities.
 
 ## Training Data
@@ -97,10 +97,10 @@ potential to earn income.
 Because the target concerns income and the features include sensitive or
 potentially sensitive characteristics, errors may affect groups differently.
 The model should not be used for consequential decisions about individuals. Any
-research or deployment beyond this educational project would require a review of
-data provenance, privacy, legal requirements, fairness, calibration, and human
-oversight. The public availability of the dataset should not be interpreted as a
-guarantee that it is appropriate for every proposed use.
+real-world use beyond this demonstration would require a review of data
+provenance, privacy, legal requirements, fairness, calibration, and human
+oversight. The public availability of the dataset should not be interpreted as
+a guarantee that it is appropriate for every proposed use.
 
 ## Caveats and Recommendations
 

@@ -1,6 +1,4 @@
-# Script to train machine learning model.
-
-# Add the necessary imports for the starter code.
+# Train, evaluate, and serialize the Census Income classifier.
 import joblib
 import pandas as pd
 from statistics import stdev, mean
@@ -21,7 +19,7 @@ def print_metric(metric_name, metric_values):
     )
 
 
-# Add code to load in the data.
+# Load the cleaned Census Income dataset.
 data = pd.read_csv("starter/data/census.csv", delimiter=",", engine="python")
 cat_features = [
     "workclass",
@@ -33,8 +31,8 @@ cat_features = [
     "sex",
     "native-country",
 ]
-# Optional enhancement, use K-fold cross validation instead of a train-test
-# split.
+# Estimate out-of-sample performance with five-fold stratified
+# cross-validation.
 skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 X = data.drop(columns=["salary"])
 y = data["salary"]
@@ -72,7 +70,7 @@ print_metric("Precision", precisions)
 print_metric("Recall", recalls)
 print_metric("F1 Score", f1s)
 
-# Train and save a model.
+# Fit the final model on all available data and save its artifacts.
 X, y, encoder, lb = process_data(
     data,
     categorical_features=cat_features,
